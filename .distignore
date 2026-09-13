@@ -1,0 +1,50 @@
+# Files excluded from the wp.org build. /vendor is excluded: it holds only the
+# Composer autoloader (self-contained plugin, no runtime deps) and autoload.php
+# has an identical PSR-4 fallback, so vendor/ is not shipped.
+/.git
+/vendor
+/.github
+/.gitignore
+/.distignore
+/.wp-env.json
+/.wp-env.override.json
+/node_modules
+/tests
+/scripts
+/docs
+/composer.json
+/composer.lock
+/package.json
+/package-lock.json
+/phpcs.xml.dist
+/phpstan.neon.dist
+/phpstan-baseline.neon
+/playwright.config.ts
+/tsconfig.json
+/vite.config.ts
+/README.md
+/SPEC.md
+/.DS_Store
+
+.DS_Store
+/.wordpress-org
+/test-results
+/playwright-report
+/.playwright-mcp
+
+# editor backups (never ship / never a badly_named_files reject)
+*~
+*.bak
+
+# Translation import tooling (GlotPress PO/MO staging) - never ship in the zip
+glotpress-import/
+
+# wp.org builds translations from translate.wordpress.org, so shipping our own
+# .po/.mo in the package is a review issue. The .pot stays: it is what the
+# translators import from.
+/languages/*.po
+/languages/*.mo
+# Compiled JED files for the block editor script are the same problem as .mo:
+# wp.org serves translations from translate.wordpress.org, and a package that
+# ships its own is what pended reel.
+/languages/*.json

@@ -1,0 +1,307 @@
+/*
+ * The printed document.
+ *
+ * This plugin has no PDF engine: the browser is the engine, so this stylesheet
+ * is the layout, not decoration. Anything that reads well on screen and breaks
+ * badly on paper is a defect here.
+ */
+
+:root {
+	--folio-ink: #1a1a1a;
+	--folio-muted: #565656;
+	--folio-rule: #d8d8d8;
+	--folio-gap: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body.folio-document {
+	margin: 0;
+	padding: 24px;
+	background: #f2f2f2;
+	color: var(--folio-ink);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+	line-height: 1.45;
+}
+
+.folio {
+	max-width: 210mm;
+	margin: 0 auto;
+	padding: 16mm;
+	background: #fff;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 12%);
+}
+
+/* Toolbar ----------------------------------------------------------------- */
+
+.folio-toolbar {
+	max-width: 210mm;
+	margin: 0 auto 16px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.folio-toolbar__print,
+.folio-toolbar__next {
+	font: inherit;
+	padding: 8px 16px;
+	border: 1px solid var(--folio-ink);
+	border-radius: 4px;
+	background: var(--folio-ink);
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.folio-toolbar__next {
+	background: transparent;
+	color: var(--folio-ink);
+}
+
+.folio-toolbar__print:focus-visible,
+.folio-toolbar__next:focus-visible {
+	outline: 3px solid #2563eb;
+	outline-offset: 2px;
+}
+
+/* Header and footer ------------------------------------------------------- */
+
+.folio-header {
+	display: flex;
+	gap: var(--folio-gap);
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-bottom: 8px;
+	margin-bottom: var(--folio-gap);
+	border-bottom: 2px solid var(--folio-ink);
+}
+
+.folio-header__logo {
+	max-width: 45mm;
+	max-height: 25mm;
+	height: auto;
+	width: auto;
+}
+
+.folio-header__meta {
+	text-align: right;
+	margin-left: auto;
+}
+
+.folio-header__shop,
+.folio-header__date {
+	display: block;
+	font-size: 10pt;
+	color: var(--folio-muted);
+}
+
+.folio-header__title {
+	margin: 2px 0;
+	font-size: 16pt;
+}
+
+.folio-footer {
+	margin-top: var(--folio-gap);
+	padding-top: 8px;
+	border-top: 1px solid var(--folio-rule);
+	font-size: 9pt;
+	color: var(--folio-muted);
+}
+
+.folio-footer__end {
+	margin: 4px 0 0;
+}
+
+/* Product blocks ---------------------------------------------------------- */
+
+.folio-title {
+	margin: 0 0 8px;
+	font-size: 14pt;
+}
+
+.folio--sheet .folio-title {
+	font-size: 20pt;
+}
+
+.folio-title__link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.folio-image {
+	margin: 0 0 8px;
+}
+
+.folio-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.folio-fields {
+	margin: 0 0 var(--folio-gap);
+}
+
+.folio-field {
+	display: flex;
+	gap: 8px;
+	padding: 3px 0;
+	border-bottom: 1px solid var(--folio-rule);
+}
+
+.folio-field dt {
+	flex: 0 0 32%;
+	font-weight: 600;
+	color: var(--folio-muted);
+}
+
+.folio-field dd {
+	flex: 1;
+	margin: 0;
+}
+
+/* A description is prose, not a label/value pair. */
+.folio-field--description,
+.folio-field--short {
+	display: block;
+}
+
+.folio-field--description dt,
+.folio-field--short dt {
+	margin-bottom: 2px;
+}
+
+/* Catalog grid ------------------------------------------------------------ */
+
+.folio--catalog .folio-title,
+.folio--catalog .folio-image,
+.folio--catalog .folio-fields {
+	break-inside: avoid;
+}
+
+.folio--cols-2 .folio-title,
+.folio--cols-3 .folio-title,
+.folio--cols-4 .folio-title {
+	font-size: 12pt;
+}
+
+/* Price list -------------------------------------------------------------- */
+
+.folio-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 10pt;
+}
+
+.folio-table th,
+.folio-table td {
+	text-align: left;
+	padding: 5px 6px;
+	border-bottom: 1px solid var(--folio-rule);
+	vertical-align: top;
+}
+
+.folio-table th {
+	border-bottom: 2px solid var(--folio-ink);
+}
+
+.folio-cell--price {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.folio-cell--sku,
+.folio-cell--gtin {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.folio-break {
+	break-after: page;
+}
+
+/* Print ------------------------------------------------------------------- */
+
+@page {
+	size: A4;
+	margin: 14mm;
+}
+
+@media print {
+	body.folio-document {
+		margin: 0;
+		padding: 0;
+		background: #fff;
+		font-size: 10pt;
+	}
+
+	.folio {
+		max-width: none;
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+	}
+
+	.no-print {
+		display: none !important;
+	}
+
+	/* The header rule and the logo are the document's identity: without this a
+	   browser drops backgrounds and borders to save ink. */
+	.folio-header {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+	}
+
+	/* Never split a product across two pages: a card whose price landed on the
+	   next sheet is worse than a shorter page. */
+	.folio-field,
+	.folio-fields,
+	.folio-image,
+	.folio-table tr {
+		break-inside: avoid;
+	}
+
+	.folio-title {
+		break-after: avoid;
+	}
+
+	/* The column head repeats on every page of a long price list. */
+	.folio-table thead {
+		display: table-header-group;
+	}
+
+	.folio-footer {
+		break-before: avoid;
+	}
+
+	/* A printed link to a product is useless as a link; the sheet carries the
+	   product name, so the URL would only add noise. */
+	.folio-title__link {
+		text-decoration: none;
+	}
+
+	/* Multi-column catalogs, only on paper. */
+	.folio--cols-2 {
+		column-count: 2;
+		column-gap: 10mm;
+	}
+
+	.folio--cols-3 {
+		column-count: 3;
+		column-gap: 8mm;
+	}
+
+	.folio--cols-4 {
+		column-count: 4;
+		column-gap: 6mm;
+	}
+
+	.folio--catalog .folio-header,
+	.folio--catalog .folio-footer {
+		column-span: all;
+	}
+}
