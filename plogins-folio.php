@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Plogins Folio - Product Sheets, Catalogs and Price Lists for WooCommerce
+ * Plugin Name:       Folio - Product Sheets, Catalogs and Price Lists for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-folio/
  * Description:       Print a product sheet, a whole category catalog or a price list straight from your shop, and save it as PDF from your browser.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -25,7 +25,7 @@ namespace Folio;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.0.0';
+const VERSION     = '1.0.1';
 const PLUGIN_FILE = __FILE__;
 
 define('FOLIO_DIR', plugin_dir_path(__FILE__));

@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plogins Folio - Product Sheets, Catalogs and Price Lists for WooCommerce 1.0.0\n"
+"Project-Id-Version: Folio - Product Sheets, Catalogs and Price Lists for WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-folio\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-folio.php
-msgid "Plogins Folio - Product Sheets, Catalogs and Price Lists for WooCommerce"
+msgid "Folio - Product Sheets, Catalogs and Price Lists for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin

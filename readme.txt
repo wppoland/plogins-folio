@@ -1,10 +1,10 @@
-=== Plogins Folio - Product Sheets, Catalogs and Price Lists for WooCommerce ===
+=== Folio - Product Sheets, Catalogs and Price Lists for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, catalog, price list, product sheet, print
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,9 @@ The document is never cached. Prices can differ per customer, so caching one per
 4. The settings screen: what each document shows.
 
 == Changelog ==
+
+= 1.0.1 =
+* Display name drops the "Plogins " prefix; the slug, text domain and option keys are unchanged.
 
 = 1.0.0 =
 * First release: product sheets, category and shop catalogs, and price lists, all printable from the browser.
