@@ -6,6 +6,7 @@ namespace Folio\Render;
 
 use Folio\Document\Block;
 use Folio\Document\Document;
+use Folio\Document\ProductData;
 use Folio\Service\Settings;
 
 defined('ABSPATH') || exit;
@@ -51,6 +52,8 @@ final class HtmlRenderer
             'dt'      => $common,
             'dd'      => $common,
             'br'      => [],
+            'del'     => [],
+            'ins'     => [],
             'a'       => $common + ['href' => true, 'rel' => true, 'target' => true],
             'img'     => $common + [
                 'src'      => true,
@@ -261,7 +264,7 @@ final class HtmlRenderer
 
             $out .= '<div class="folio-field folio-field--' . esc_attr($key) . '">';
             $out .= '<dt>' . esc_html($label) . '</dt>';
-            $out .= '<dd>' . nl2br(esc_html($value)) . '</dd>';
+            $out .= '<dd>' . ('price' === $key ? wp_kses($value, ProductData::PRICE_TAGS) : nl2br(esc_html($value))) . '</dd>';
             $out .= '</div>';
         }
 
@@ -286,7 +289,7 @@ final class HtmlRenderer
             }
 
             $out .= '<td class="folio-cell folio-cell--' . esc_attr($key) . '">'
-                . esc_html((string) $cells[$key]) . '</td>';
+                . ('price' === $key ? wp_kses((string) $cells[$key], ProductData::PRICE_TAGS) : esc_html((string) $cells[$key])) . '</td>';
         }
 
         return $out . '</tr>';

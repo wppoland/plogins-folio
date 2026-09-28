@@ -92,9 +92,10 @@ final class ProductData
             'sku'         => $product->get_sku(),
             'gtin'        => $this->gtin($product),
             // Already formatted, already tax-adjusted, already filtered by
-            // whatever prices this shop. Kept as HTML: it carries <del>/<ins>
-            // for a sale price and the currency symbol's own markup.
-            'price'       => wp_strip_all_tags($product->get_price_html()),
+            // whatever prices this shop. Only <del>/<ins> survive, so a sale
+            // still prints struck through; the screen-reader sentences go,
+            // because the document never loads the CSS that hides them.
+            'price'       => self::price($product->get_price_html()),
             'short'       => $this->text($product->get_short_description()),
             'description' => $this->text($product->get_description()),
             'attributes'  => $this->attributes($product),
@@ -257,5 +258,15 @@ final class ProductData
         $rendered = wp_strip_all_tags(str_replace(['</p>', '<br>', '<br/>', '<br />'], "\n", $rendered));
 
         return trim((string) preg_replace("/\n{3,}/", "\n\n", $rendered));
+    }
+
+    /** Markup a printed price may keep. */
+    public const PRICE_TAGS = ['del' => [], 'ins' => []];
+
+    public static function price(string $html): string
+    {
+        $html = (string) preg_replace('#<span[^>]*class="[^"]*screen-reader-text[^"]*"[^>]*>.*?</span>#s', '', $html);
+
+        return trim((string) preg_replace('/\s+/', ' ', wp_kses($html, self::PRICE_TAGS)));
     }
 }

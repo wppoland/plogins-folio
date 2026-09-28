@@ -4,7 +4,7 @@ Tags: woocommerce, catalog, price list, product sheet, print
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,11 +60,11 @@ Open any document and use your browser's print dialog, then choose **Save as PDF
 
 = Can I generate PDF files automatically, without opening a page? =
 
-Not in this plugin. Building files on a schedule, exporting the whole catalog in the background, or attaching a sheet to an email needs a PDF engine running on your server, which is what the paid edition is for. Nothing here is disabled or locked; the feature is simply not part of this plugin.
+No. Building files on a schedule, exporting the whole catalog in the background, or attaching a sheet to an email needs a PDF engine running on your server, and this plugin deliberately does not carry one.
 
 = Can I print only some products? =
 
-Yes. Print from a category page and you get that category. Print from a filtered shop page and you get what the filter left. Use the `[folio_print]` shortcode to place a link anywhere.
+Yes. Print from a category page and you get that category; attribute and price filters are not carried over, so a filtered shop page prints its whole category. Use the `[folio_print]` shortcode to place a link anywhere.
 
 = What does the shortcode accept? =
 
@@ -90,6 +90,10 @@ The document is never cached. Prices can differ per customer, so caching one per
 4. The settings screen: what each document shows.
 
 == Changelog ==
+
+= 1.0.2 =
+* A sale price prints struck through beside the new price, instead of repeating WooCommerce's screen-reader sentences on paper.
+* FAQ no longer mentions a paid edition that does not exist, and no longer claims a filtered shop page prints only what the filter left.
 
 = 1.0.1 =
 * Display name drops the "Plogins " prefix; the slug, text domain and option keys are unchanged.

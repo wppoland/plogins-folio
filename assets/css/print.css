@@ -305,3 +305,7 @@ body.folio-document {
 		column-span: all;
 	}
 }
+
+/* A sale price keeps its struck-through regular price beside the new one. */
+.folio-document del { opacity: 0.6; margin-right: 0.35em; }
+.folio-document ins { text-decoration: none; }

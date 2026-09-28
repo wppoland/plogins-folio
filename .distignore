@@ -48,3 +48,5 @@ glotpress-import/
 # wp.org serves translations from translate.wordpress.org, and a package that
 # ships its own is what pended reel.
 /languages/*.json
+/.shotkit
+/.raw
