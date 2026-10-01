@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Folio - Product Sheets, Catalogs and Price Lists for WooCommerce
- * Plugin URI:        https://plogins.com/plogins-folio/
+ * Plugin Name:       Printvane - Product Sheets, Catalogs and Price Lists for WooCommerce
+ * Plugin URI:        https://plogins.com/printvane/
  * Description:       Print a product sheet, a whole category catalog or a price list straight from your shop, and save it as PDF from your browser.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -11,7 +11,7 @@
  * Author URI:        https://wppoland.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       plogins-folio
+ * Text Domain:       printvane
  * Domain Path:       /languages
  * WC requires at least: 8.0
  * WC tested up to: 11.1
@@ -25,7 +25,7 @@ namespace Folio;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.0.2';
+const VERSION     = '1.0.3';
 const PLUGIN_FILE = __FILE__;
 
 define('FOLIO_DIR', plugin_dir_path(__FILE__));
@@ -45,7 +45,7 @@ add_action('plugins_loaded', static function (): void {
     if (! class_exists('WooCommerce')) {
         add_action('admin_notices', static function (): void {
             echo '<div class="notice notice-error"><p>';
-            echo esc_html__('Plogins Folio requires WooCommerce to be active.', 'plogins-folio');
+            echo esc_html__('Printvane requires WooCommerce to be active.', 'printvane');
             echo '</p></div>';
         });
         return;

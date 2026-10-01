@@ -1,10 +1,10 @@
-=== Folio - Product Sheets, Catalogs and Price Lists for WooCommerce ===
+=== Printvane - Product Sheets, Catalogs and Price Lists for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, catalog, price list, product sheet, print
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Print a product sheet, a whole category catalog or a price list from your shop, 
 
 == Description ==
 
-Folio turns what is already in your shop into something you can put on paper: a one-page sheet for a single product, a catalog of a whole category, or a compact price list with no images.
+Printvane turns what is already in your shop into something you can put on paper: a one-page sheet for a single product, a catalog of a whole category, or a compact price list with no images.
 
 Every document opens in its own page, styled for print. Your browser's print dialog does the rest, including **Save as PDF**.
 
@@ -28,28 +28,28 @@ Because your browser is better at it, and honest about it.
 
 A plugin that builds PDFs on your server has to carry a PDF engine. A usable one is tens of megabytes, most of that fonts, and it still runs out of memory on a large catalog. Your browser already has an excellent one: it produces a real PDF with selectable text, the right font for every alphabet, and images at the printer's resolution, and it cannot time out.
 
-So Folio gives you the document, and **File > Print > Save as PDF** gives you the file.
+So Printvane gives you the document, and **File > Print > Save as PDF** gives you the file.
 
 What a browser cannot do is produce a file with nobody at the keyboard. If you need that, see the FAQ below.
 
 = Prices are the prices your customer sees =
 
-Folio reads prices through WooCommerce's own price API in the context of whoever opened the document. That means sale prices, tax display settings, and any plugin of yours that changes prices for a role or a quantity are all reflected without configuring anything. A catalog-mode plugin that hides prices hides them here too.
+Printvane reads prices through WooCommerce's own price API in the context of whoever opened the document. That means sale prices, tax display settings, and any plugin of yours that changes prices for a role or a quantity are all reflected without configuring anything. A catalog-mode plugin that hides prices hides them here too.
 
 = Large catalogs =
 
-A document holds at most 200 products. Past that, Folio paginates: you get "part 1 of 25" with a link to the next, and each part is its own print job. The last line of every document says how many products it holds, so you can always tell a document that ended from one that was cut short.
+A document holds at most 200 products. Past that, Printvane paginates: you get "part 1 of 25" with a link to the next, and each part is its own print job. The last line of every document says how many products it holds, so you can always tell a document that ended from one that was cut short.
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-folio/docs/](https://plogins.com/plogins-folio/docs/)
-* **Plugin page**: [plogins.com/plogins-folio/](https://plogins.com/plogins-folio/)
+* **Documentation**: [plogins.com/printvane/docs/](https://plogins.com/printvane/docs/)
+* **Plugin page**: [plogins.com/printvane/](https://plogins.com/printvane/)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-folio/issues](https://github.com/wppoland/plogins-folio/issues)
 
 == Installation ==
 
 1. Install and activate the plugin. WooCommerce must be active.
-2. Go to **WooCommerce > Folio** and choose what each document shows.
+2. Go to **WooCommerce > Printvane** and choose what each document shows.
 3. Print links appear on product pages and on shop and category pages. There is also a **Print** row action on the products list.
 
 == Frequently Asked Questions ==
@@ -76,7 +76,7 @@ Anyone who can see the product can print it. The documents show public catalog d
 
 = My printed images look blurry. =
 
-Folio asks for WooCommerce's single-product image size and offers the browser the full `srcset`, so it can pick a higher resolution candidate. If your product images are small to begin with, there is nothing larger to print. Upload larger originals and regenerate thumbnails.
+Printvane asks for WooCommerce's single-product image size and offers the browser the full `srcset`, so it can pick a higher resolution candidate. If your product images are small to begin with, there is nothing larger to print. Upload larger originals and regenerate thumbnails.
 
 = Does it work with my page cache? =
 
@@ -90,6 +90,9 @@ The document is never cached. Prices can differ per customer, so caching one per
 4. The settings screen: what each document shows.
 
 == Changelog ==
+
+= 1.0.3 =
+* Renamed to Printvane, with the slug and text domain `printvane`. Settings, shortcode, hooks and the `?folio=` links are unchanged.
 
 = 1.0.2 =
 * A sale price prints struck through beside the new price, instead of repeating WooCommerce's screen-reader sentences on paper.

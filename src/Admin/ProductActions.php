@@ -34,7 +34,7 @@ final class ProductActions implements HasHooks
         $actions['folio_print'] = sprintf(
             '<a href="%s" target="_blank" rel="noopener">%s</a>',
             esc_url(PrintRoute::url(DocumentBuilder::SHEET, $post->ID)),
-            esc_html__('Print', 'plogins-folio'),
+            esc_html__('Print', 'printvane'),
         );
 
         return $actions;

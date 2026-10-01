@@ -183,7 +183,7 @@ final class HtmlRenderer
         $summary = $parts > 1
             ? sprintf(
                 /* translators: 1: products on this part, 2: part number, 3: total parts, 4: products in total. */
-                __('End of document: %1$d products, part %2$d of %3$d, %4$d in total.', 'plogins-folio'),
+                __('End of document: %1$d products, part %2$d of %3$d, %4$d in total.', 'printvane'),
                 $shown,
                 $part,
                 $parts,
@@ -191,7 +191,7 @@ final class HtmlRenderer
             )
             : sprintf(
                 /* translators: %d: number of products in the document. */
-                _n('End of document: %d product.', 'End of document: %d products.', $shown, 'plogins-folio'),
+                _n('End of document: %d product.', 'End of document: %d products.', $shown, 'printvane'),
                 $shown,
             );
 

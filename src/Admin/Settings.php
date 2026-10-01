@@ -41,8 +41,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Folio Settings', 'plogins-folio'),
-            __('Folio', 'plogins-folio'),
+            __('Printvane Settings', 'printvane'),
+            __('Printvane', 'printvane'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -116,91 +116,91 @@ final class Settings implements HasHooks
         $option   = SettingsStore::OPTION;
         ?>
         <div class="wrap">
-            <h1><?php echo esc_html__('Folio', 'plogins-folio'); ?></h1>
+            <h1><?php echo esc_html__('Printvane', 'printvane'); ?></h1>
             <p class="description">
-                <?php echo esc_html__('Print a product sheet, a category catalog or a price list. Use your browser\'s print dialog to save any of them as a PDF.', 'plogins-folio'); ?>
+                <?php echo esc_html__('Print a product sheet, a category catalog or a price list. Use your browser\'s print dialog to save any of them as a PDF.', 'printvane'); ?>
             </p>
 
             <p>
                 <a class="button" target="_blank" rel="noopener"
                    href="<?php echo esc_url(PrintRoute::url(DocumentBuilder::CATALOG)); ?>">
-                    <?php echo esc_html__('Preview the whole-shop catalog', 'plogins-folio'); ?>
+                    <?php echo esc_html__('Preview the whole-shop catalog', 'printvane'); ?>
                 </a>
                 <a class="button" target="_blank" rel="noopener"
                    href="<?php echo esc_url(PrintRoute::url(DocumentBuilder::PRICELIST)); ?>">
-                    <?php echo esc_html__('Preview the price list', 'plogins-folio'); ?>
+                    <?php echo esc_html__('Preview the price list', 'printvane'); ?>
                 </a>
             </p>
 
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
-                <h2><?php echo esc_html__('Where the links appear', 'plogins-folio'); ?></h2>
+                <h2><?php echo esc_html__('Where the links appear', 'printvane'); ?></h2>
                 <table class="form-table" role="presentation">
                     <?php
-                    $this->checkbox($option, 'button_on_product', __('On the product page', 'plogins-folio'), ! empty($settings['button_on_product']));
-                    $this->checkbox($option, 'button_on_archive', __('On shop and category pages', 'plogins-folio'), ! empty($settings['button_on_archive']));
+                    $this->checkbox($option, 'button_on_product', __('On the product page', 'printvane'), ! empty($settings['button_on_product']));
+                    $this->checkbox($option, 'button_on_archive', __('On shop and category pages', 'printvane'), ! empty($settings['button_on_archive']));
                     ?>
                 </table>
 
-                <h2><?php echo esc_html__('What each document shows', 'plogins-folio'); ?></h2>
+                <h2><?php echo esc_html__('What each document shows', 'printvane'); ?></h2>
                 <table class="form-table" role="presentation">
                     <?php
-                    $this->fieldChecklist($option, 'sheet_fields', __('Product sheet', 'plogins-folio'), $fields, (array) $settings['sheet_fields']);
-                    $this->fieldChecklist($option, 'catalog_fields', __('Catalog', 'plogins-folio'), $fields, (array) $settings['catalog_fields']);
-                    $this->fieldChecklist($option, 'pricelist_fields', __('Price list', 'plogins-folio'), $fields, (array) $settings['pricelist_fields']);
+                    $this->fieldChecklist($option, 'sheet_fields', __('Product sheet', 'printvane'), $fields, (array) $settings['sheet_fields']);
+                    $this->fieldChecklist($option, 'catalog_fields', __('Catalog', 'printvane'), $fields, (array) $settings['catalog_fields']);
+                    $this->fieldChecklist($option, 'pricelist_fields', __('Price list', 'printvane'), $fields, (array) $settings['pricelist_fields']);
                     ?>
                     <tr>
                         <th scope="row">
-                            <label for="folio-columns"><?php echo esc_html__('Catalog columns', 'plogins-folio'); ?></label>
+                            <label for="folio-columns"><?php echo esc_html__('Catalog columns', 'printvane'); ?></label>
                         </th>
                         <td>
                             <input type="number" min="1" max="4" id="folio-columns"
                                    name="<?php echo esc_attr($option); ?>[catalog_columns]"
                                    value="<?php echo esc_attr((string) $settings['catalog_columns']); ?>" class="small-text">
-                            <p class="description"><?php echo esc_html__('Columns are applied when printing, not on screen.', 'plogins-folio'); ?></p>
+                            <p class="description"><?php echo esc_html__('Columns are applied when printing, not on screen.', 'printvane'); ?></p>
                         </td>
                     </tr>
                 </table>
 
-                <h2><?php echo esc_html__('Header and footer', 'plogins-folio'); ?></h2>
+                <h2><?php echo esc_html__('Header and footer', 'printvane'); ?></h2>
                 <table class="form-table" role="presentation">
                     <?php
-                    $this->checkbox($option, 'show_logo', __('Show a logo', 'plogins-folio'), ! empty($settings['show_logo']));
+                    $this->checkbox($option, 'show_logo', __('Show a logo', 'printvane'), ! empty($settings['show_logo']));
                     ?>
                     <tr>
                         <th scope="row">
-                            <label for="folio-logo"><?php echo esc_html__('Logo attachment ID', 'plogins-folio'); ?></label>
+                            <label for="folio-logo"><?php echo esc_html__('Logo attachment ID', 'printvane'); ?></label>
                         </th>
                         <td>
                             <input type="number" min="0" id="folio-logo"
                                    name="<?php echo esc_attr($option); ?>[logo_id]"
                                    value="<?php echo esc_attr((string) $settings['logo_id']); ?>" class="small-text">
-                            <p class="description"><?php echo esc_html__('The media library ID of the image to print in the header. Leave at 0 for none.', 'plogins-folio'); ?></p>
+                            <p class="description"><?php echo esc_html__('The media library ID of the image to print in the header. Leave at 0 for none.', 'printvane'); ?></p>
                         </td>
                     </tr>
                     <?php
-                    $this->checkbox($option, 'show_shop', __('Show the shop name', 'plogins-folio'), ! empty($settings['show_shop']));
-                    $this->checkbox($option, 'show_date', __('Show the date the document was printed', 'plogins-folio'), ! empty($settings['show_date']));
-                    $this->checkbox($option, 'show_page_numbers', __('Show how many products the document holds', 'plogins-folio'), ! empty($settings['show_page_numbers']));
+                    $this->checkbox($option, 'show_shop', __('Show the shop name', 'printvane'), ! empty($settings['show_shop']));
+                    $this->checkbox($option, 'show_date', __('Show the date the document was printed', 'printvane'), ! empty($settings['show_date']));
+                    $this->checkbox($option, 'show_page_numbers', __('Show how many products the document holds', 'printvane'), ! empty($settings['show_page_numbers']));
                     ?>
                     <tr>
                         <th scope="row">
-                            <label for="folio-footer-note"><?php echo esc_html__('Footer note', 'plogins-folio'); ?></label>
+                            <label for="folio-footer-note"><?php echo esc_html__('Footer note', 'printvane'); ?></label>
                         </th>
                         <td>
                             <textarea id="folio-footer-note" rows="3" class="large-text"
                                       name="<?php echo esc_attr($option); ?>[texts][footer_note]"><?php
                                 echo esc_textarea((string) ($settings['texts']['footer_note'] ?? ''));
                             ?></textarea>
-                            <p class="description"><?php echo esc_html__('Printed at the end of every document. Prices valid until, terms, contact details.', 'plogins-folio'); ?></p>
+                            <p class="description"><?php echo esc_html__('Printed at the end of every document. Prices valid until, terms, contact details.', 'printvane'); ?></p>
                         </td>
                     </tr>
                 </table>
 
-                <h2><?php echo esc_html__('Wording', 'plogins-folio'); ?></h2>
+                <h2><?php echo esc_html__('Wording', 'printvane'); ?></h2>
                 <p class="description">
-                    <?php echo esc_html__('Leave a field empty to use the translated default for your site language.', 'plogins-folio'); ?>
+                    <?php echo esc_html__('Leave a field empty to use the translated default for your site language.', 'printvane'); ?>
                 </p>
                 <table class="form-table" role="presentation">
                     <?php
@@ -226,7 +226,7 @@ final class Settings implements HasHooks
                     <input type="checkbox" value="1"
                            name="<?php echo esc_attr($option . '[' . $key . ']'); ?>"
                         <?php checked($checked); ?>>
-                    <?php echo esc_html__('Enabled', 'plogins-folio'); ?>
+                    <?php echo esc_html__('Enabled', 'printvane'); ?>
                 </label>
             </td>
         </tr>

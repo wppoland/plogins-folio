@@ -88,13 +88,13 @@ final class PrintRoute implements HasHooks
         // on template_redirect, which fires first: a handle registered on the
         // later hook does not exist yet and the document prints unstyled.
         wp_register_style(
-            'plogins-folio-print',
+            'printvane-print',
             plugins_url('assets/css/print.css', \Folio\PLUGIN_FILE),
             [],
             \Folio\VERSION,
         );
         wp_register_script(
-            'plogins-folio-print',
+            'printvane-print',
             plugins_url('assets/js/print.js', \Folio\PLUGIN_FILE),
             [],
             \Folio\VERSION,

@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title><?php echo esc_html($folio_document->title); ?></title>
-    <?php wp_print_styles('plogins-folio-print'); ?>
+    <?php wp_print_styles('printvane-print'); ?>
 </head>
 <body class="folio-document">
 
@@ -43,7 +43,7 @@ defined('ABSPATH') || exit;
             <?php
             echo esc_html(sprintf(
                 /* translators: %d: the next part number. */
-                __('Next part (%d)', 'plogins-folio'),
+                __('Next part (%d)', 'printvane'),
                 ((int) $folio_document->metaValue('part', 1)) + 1,
             ));
             ?>
@@ -61,6 +61,6 @@ defined('ABSPATH') || exit;
 echo wp_kses($folio_body, \Folio\Render\HtmlRenderer::allowedHtml());
 ?>
 
-<?php wp_print_scripts('plogins-folio-print'); ?>
+<?php wp_print_scripts('printvane-print'); ?>
 </body>
 </html>

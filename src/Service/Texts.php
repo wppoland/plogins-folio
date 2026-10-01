@@ -27,45 +27,45 @@ final class Texts
     {
         return [
             // Buttons and links.
-            'button_sheet'     => __('Print this product', 'plogins-folio'),
-            'button_catalog'   => __('Print this catalog', 'plogins-folio'),
-            'button_pricelist' => __('Print price list', 'plogins-folio'),
-            'print_now'        => __('Print, or save as PDF', 'plogins-folio'),
+            'button_sheet'     => __('Print this product', 'printvane'),
+            'button_catalog'   => __('Print this catalog', 'printvane'),
+            'button_pricelist' => __('Print price list', 'printvane'),
+            'print_now'        => __('Print, or save as PDF', 'printvane'),
 
             // Document furniture.
-            'doc_sheet_title'     => __('Product sheet', 'plogins-folio'),
-            'doc_catalog_title'   => __('Catalog', 'plogins-folio'),
-            'doc_pricelist_title' => __('Price list', 'plogins-folio'),
+            'doc_sheet_title'     => __('Product sheet', 'printvane'),
+            'doc_catalog_title'   => __('Catalog', 'printvane'),
+            'doc_pricelist_title' => __('Price list', 'printvane'),
             'footer_note'         => '',
 
             // Field labels.
-            'field_image'             => __('Image', 'plogins-folio'),
-            'field_sku'               => __('SKU', 'plogins-folio'),
-            'field_gtin'              => __('GTIN', 'plogins-folio'),
-            'field_price'             => __('Price', 'plogins-folio'),
-            'field_short_description' => __('Summary', 'plogins-folio'),
-            'field_description'       => __('Description', 'plogins-folio'),
-            'field_attributes'        => __('Attributes', 'plogins-folio'),
-            'field_categories'        => __('Categories', 'plogins-folio'),
-            'field_stock'             => __('Availability', 'plogins-folio'),
-            'field_dimensions'        => __('Dimensions', 'plogins-folio'),
-            'field_weight'            => __('Weight', 'plogins-folio'),
+            'field_image'             => __('Image', 'printvane'),
+            'field_sku'               => __('SKU', 'printvane'),
+            'field_gtin'              => __('GTIN', 'printvane'),
+            'field_price'             => __('Price', 'printvane'),
+            'field_short_description' => __('Summary', 'printvane'),
+            'field_description'       => __('Description', 'printvane'),
+            'field_attributes'        => __('Attributes', 'printvane'),
+            'field_categories'        => __('Categories', 'printvane'),
+            'field_stock'             => __('Availability', 'printvane'),
+            'field_dimensions'        => __('Dimensions', 'printvane'),
+            'field_weight'            => __('Weight', 'printvane'),
 
             // Stock wording.
-            'stock_in'        => __('In stock', 'plogins-folio'),
-            'stock_out'       => __('Out of stock', 'plogins-folio'),
-            'stock_backorder' => __('On backorder', 'plogins-folio'),
+            'stock_in'        => __('In stock', 'printvane'),
+            'stock_out'       => __('Out of stock', 'printvane'),
+            'stock_backorder' => __('On backorder', 'printvane'),
 
             // Price list column headings.
-            'col_sku'   => __('SKU', 'plogins-folio'),
-            'col_name'  => __('Product', 'plogins-folio'),
-            'col_price' => __('Price', 'plogins-folio'),
-            'col_gtin'  => __('GTIN', 'plogins-folio'),
-            'col_stock' => __('Availability', 'plogins-folio'),
+            'col_sku'   => __('SKU', 'printvane'),
+            'col_name'  => __('Product', 'printvane'),
+            'col_price' => __('Price', 'printvane'),
+            'col_gtin'  => __('GTIN', 'printvane'),
+            'col_stock' => __('Availability', 'printvane'),
 
             // Messages.
-            'empty'        => __('There is nothing to print here.', 'plogins-folio'),
-            'not_available' => __('This document is not available.', 'plogins-folio'),
+            'empty'        => __('There is nothing to print here.', 'printvane'),
+            'not_available' => __('This document is not available.', 'printvane'),
         ];
     }
 

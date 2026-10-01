@@ -24,6 +24,6 @@ namespace Folio {
         define('Folio\\VERSION', '0.1.0');
     }
     if (! defined('Folio\\PLUGIN_FILE')) {
-        define('Folio\\PLUGIN_FILE', '/tmp/folio/plogins-folio.php');
+        define('Folio\\PLUGIN_FILE', '/tmp/printvane/printvane.php');
     }
 }
