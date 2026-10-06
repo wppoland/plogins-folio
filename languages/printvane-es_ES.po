@@ -1,0 +1,282 @@
+# Copyright (C) 2026 WPPoland.com
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Printvane - Product Sheets, Catalogs and Price Lists for WooCommerce 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/printvane\n"
+"POT-Creation-Date: 2026-10-01T17:28:28+00:00\n"
+"PO-Revision-Date: 2026-10-01T17:28:28+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: printvane\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: printvane.php
+msgid "Printvane - Product Sheets, Catalogs and Price Lists for WooCommerce"
+msgstr ""
+"Printvane - Fichas de producto, catálogos y listas de precios para "
+"WooCommerce"
+
+#. Plugin URI of the plugin
+#: printvane.php
+msgid "https://plogins.com/printvane/"
+msgstr "https://plogins.com/printvane/"
+
+#. Description of the plugin
+#: printvane.php
+msgid ""
+"Print a product sheet, a whole category catalog or a price list straight "
+"from your shop, and save it as PDF from your browser."
+msgstr ""
+"Imprime una ficha de producto, el catálogo de una categoría completa o una "
+"lista de precios directamente desde tu tienda, y guárdalo como PDF desde el "
+"navegador."
+
+#. Author of the plugin
+#: printvane.php
+msgid "WPPoland.com"
+msgstr "WPPoland.com"
+
+#. Author URI of the plugin
+#: printvane.php
+msgid "https://wppoland.com"
+msgstr "https://wppoland.com"
+
+#: printvane.php:48
+msgid "Printvane requires WooCommerce to be active."
+msgstr "Printvane necesita que WooCommerce esté activo."
+
+#: src/Admin/ProductActions.php:37
+msgid "Print"
+msgstr "Imprimir"
+
+#: src/Admin/Settings.php:44
+msgid "Printvane Settings"
+msgstr "Ajustes de Printvane"
+
+#: src/Admin/Settings.php:45 src/Admin/Settings.php:119
+msgid "Printvane"
+msgstr "Printvane"
+
+#: src/Admin/Settings.php:121
+msgid ""
+"Print a product sheet, a category catalog or a price list. Use your "
+"browser's print dialog to save any of them as a PDF."
+msgstr ""
+"Imprime una ficha de producto, un catálogo de categoría o una lista de "
+"precios. Usa el diálogo de impresión del navegador para guardar cualquiera "
+"de ellos como PDF."
+
+#: src/Admin/Settings.php:127
+msgid "Preview the whole-shop catalog"
+msgstr "Vista previa del catálogo de toda la tienda"
+
+#: src/Admin/Settings.php:131
+msgid "Preview the price list"
+msgstr "Vista previa de la lista de precios"
+
+#: src/Admin/Settings.php:138
+msgid "Where the links appear"
+msgstr "Dónde aparecen los enlaces"
+
+#: src/Admin/Settings.php:141
+msgid "On the product page"
+msgstr "En la página del producto"
+
+#: src/Admin/Settings.php:142
+msgid "On shop and category pages"
+msgstr "En las páginas de la tienda y de categorías"
+
+#: src/Admin/Settings.php:146
+msgid "What each document shows"
+msgstr "Qué muestra cada documento"
+
+#: src/Admin/Settings.php:149 src/Service/Texts.php:36
+msgid "Product sheet"
+msgstr "Ficha de producto"
+
+#: src/Admin/Settings.php:150 src/Service/Texts.php:37
+msgid "Catalog"
+msgstr "Catálogo"
+
+#: src/Admin/Settings.php:151 src/Service/Texts.php:38
+msgid "Price list"
+msgstr "Lista de precios"
+
+#: src/Admin/Settings.php:155
+msgid "Catalog columns"
+msgstr "Columnas del catálogo"
+
+#: src/Admin/Settings.php:161
+msgid "Columns are applied when printing, not on screen."
+msgstr "Las columnas se aplican al imprimir, no en pantalla."
+
+#: src/Admin/Settings.php:166
+msgid "Header and footer"
+msgstr "Encabezado y pie de página"
+
+#: src/Admin/Settings.php:169
+msgid "Show a logo"
+msgstr "Mostrar un logotipo"
+
+#: src/Admin/Settings.php:173
+msgid "Logo attachment ID"
+msgstr "ID del adjunto del logotipo"
+
+#: src/Admin/Settings.php:179
+msgid ""
+"The media library ID of the image to print in the header. Leave at 0 for "
+"none."
+msgstr ""
+"El ID en la biblioteca de medios de la imagen que se imprime en el "
+"encabezado. Déjalo en 0 para no imprimir ninguna."
+
+#: src/Admin/Settings.php:183
+msgid "Show the shop name"
+msgstr "Mostrar el nombre de la tienda"
+
+#: src/Admin/Settings.php:184
+msgid "Show the date the document was printed"
+msgstr "Mostrar la fecha en que se imprimió el documento"
+
+#: src/Admin/Settings.php:185
+msgid "Show how many products the document holds"
+msgstr "Mostrar cuántos productos contiene el documento"
+
+#: src/Admin/Settings.php:189
+msgid "Footer note"
+msgstr "Nota al pie"
+
+#: src/Admin/Settings.php:196
+msgid ""
+"Printed at the end of every document. Prices valid until, terms, contact "
+"details."
+msgstr ""
+"Se imprime al final de cada documento. Validez de los precios, condiciones, "
+"datos de contacto."
+
+#: src/Admin/Settings.php:201
+msgid "Wording"
+msgstr "Textos"
+
+#: src/Admin/Settings.php:203
+msgid ""
+"Leave a field empty to use the translated default for your site language."
+msgstr ""
+"Deja un campo vacío para usar el texto predeterminado traducido al idioma de"
+" tu sitio."
+
+#: src/Admin/Settings.php:229
+msgid "Enabled"
+msgstr "Activado"
+
+#. translators: 1: products on this part, 2: part number, 3: total parts, 4:
+#. products in total.
+#: src/Render/HtmlRenderer.php:186
+#, php-format
+msgid "End of document: %1$d products, part %2$d of %3$d, %4$d in total."
+msgstr "Fin del documento: %1$d productos, parte %2$d de %3$d, %4$d en total."
+
+#. translators: %d: number of products in the document.
+#: src/Render/HtmlRenderer.php:194
+#, php-format
+msgid "End of document: %d product."
+msgid_plural "End of document: %d products."
+msgstr[0] "Fin del documento: %d producto."
+msgstr[1] "Fin del documento: %d productos."
+
+#: src/Service/Texts.php:30
+msgid "Print this product"
+msgstr "Imprimir este producto"
+
+#: src/Service/Texts.php:31
+msgid "Print this catalog"
+msgstr "Imprimir este catálogo"
+
+#: src/Service/Texts.php:32
+msgid "Print price list"
+msgstr "Imprimir lista de precios"
+
+#: src/Service/Texts.php:33
+msgid "Print, or save as PDF"
+msgstr "Imprimir o guardar como PDF"
+
+#: src/Service/Texts.php:42
+msgid "Image"
+msgstr "Imagen"
+
+#: src/Service/Texts.php:43 src/Service/Texts.php:60
+msgid "SKU"
+msgstr "SKU"
+
+#: src/Service/Texts.php:44 src/Service/Texts.php:63
+msgid "GTIN"
+msgstr "GTIN"
+
+#: src/Service/Texts.php:45 src/Service/Texts.php:62
+msgid "Price"
+msgstr "Precio"
+
+#: src/Service/Texts.php:46
+msgid "Summary"
+msgstr "Resumen"
+
+#: src/Service/Texts.php:47
+msgid "Description"
+msgstr "Descripción"
+
+#: src/Service/Texts.php:48
+msgid "Attributes"
+msgstr "Atributos"
+
+#: src/Service/Texts.php:49
+msgid "Categories"
+msgstr "Categorías"
+
+#: src/Service/Texts.php:50 src/Service/Texts.php:64
+msgid "Availability"
+msgstr "Disponibilidad"
+
+#: src/Service/Texts.php:51
+msgid "Dimensions"
+msgstr "Dimensiones"
+
+#: src/Service/Texts.php:52
+msgid "Weight"
+msgstr "Peso"
+
+#: src/Service/Texts.php:55
+msgid "In stock"
+msgstr "Hay existencias"
+
+#: src/Service/Texts.php:56
+msgid "Out of stock"
+msgstr "Sin existencias"
+
+#: src/Service/Texts.php:57
+msgid "On backorder"
+msgstr "Se puede reservar"
+
+#: src/Service/Texts.php:61
+msgid "Product"
+msgstr "Producto"
+
+#: src/Service/Texts.php:67
+msgid "There is nothing to print here."
+msgstr "No hay nada que imprimir aquí."
+
+#: src/Service/Texts.php:68
+msgid "This document is not available."
+msgstr "Este documento no está disponible."
+
+#. translators: %d: the next part number.
+#: templates/document.php:46
+#, php-format
+msgid "Next part (%d)"
+msgstr "Siguiente parte (%d)"
