@@ -149,7 +149,7 @@ msgstr "Anzahl der Produkte im Dokument anzeigen"
 
 #: src/Admin/Settings.php:189
 msgid "Footer note"
-msgstr "Fußnote"
+msgstr "Hinweis in der Fußzeile"
 
 #: src/Admin/Settings.php:196
 msgid ""

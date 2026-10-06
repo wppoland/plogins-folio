@@ -225,7 +225,7 @@ msgstr "Precio"
 
 #: src/Service/Texts.php:46
 msgid "Summary"
-msgstr "Resumen"
+msgstr "Descripción corta"
 
 #: src/Service/Texts.php:47
 msgid "Description"
