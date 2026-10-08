@@ -64,11 +64,11 @@ No. Building files on a schedule, exporting the whole catalog in the background,
 
 = Can I print only some products? =
 
-Yes. Print from a category page and you get that category; attribute and price filters are not carried over, so a filtered shop page prints its whole category. Use the `[folio_print]` shortcode to place a link anywhere.
+Yes. Print from a category page and you get that category; attribute and price filters are not carried over, so a filtered shop page prints its whole category. Use the `[printvane_print]` (or `[folio_print]`) shortcode to place a link anywhere.
 
 = What does the shortcode accept? =
 
-`[folio_print mode="sheet" id="123" text="Print this"]`. `mode` is `sheet`, `catalog` or `pricelist`. On a product page `id` can be left out.
+`[printvane_print mode="sheet" id="123" text="Print this"]`. `mode` is `sheet`, `catalog` or `pricelist`. On a product page `id` can be left out.
 
 = Can customers print, or only me? =
 

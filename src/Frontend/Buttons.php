@@ -36,6 +36,7 @@ final class Buttons implements HasHooks
         }
 
         add_shortcode('folio_print', [$this, 'shortcode']);
+        add_shortcode('printvane_print', [$this, 'shortcode']);
     }
 
     public function renderProductLink(): void
